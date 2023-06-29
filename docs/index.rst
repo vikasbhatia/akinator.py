@@ -192,10 +192,10 @@ Variables
 These variables contain important information about the Akinator game. Please don't change any of these values in your program. It'll definitely break things.
 
 uri
-  The uri this Akinator game is using. Depends on what you put for the language param in ``Akinator.start_game()`` (e.g., ``"en.akinator.com"``, ``"fr.akinator.com"``, etc.)
+  The uri this Akinator game is using. Depends on what you put for the language param in ``Akinator.start_game()`` (e.g., ``"en.akinator.mobi"``, ``"fr.akinator.mobi"``, etc.)
 
 server
-  The server this Akinator game is using. Depends on what you put for the language param in ``Akinator.start_game()`` (e.g., ``"https://srv2.akinator.com:9162"``, ``"https://srv6.akinator.com:9127"``, etc.)
+  The server this Akinator game is using. Depends on what you put for the language param in ``Akinator.start_game()`` (e.g., ``"https://srv2.akinator.mobi:9162"``, ``"https://srv6.akinator.mobi:9127"``, etc.)
 
 session
   A number, usually in between 0 and 100, that represents the game's session

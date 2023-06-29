@@ -77,5 +77,5 @@ Usually ``pip`` will handle these for you.
 Links
 =====
 
-- `Akinator <https://akinator.com/>`_
+- `Akinator <https://akinator.mobi/>`_
 - `Documentation <https://akinator.readthedocs.io/>`_

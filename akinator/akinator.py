@@ -95,21 +95,21 @@ class Akinator():
         return json.loads(",".join(response.split("(")[1::])[:-1])
 
     def _get_session_info(self):
-        """Get uid and frontaddr from akinator.com/game"""
+        """Get uid and frontaddr from akinator.mobi/game"""
 
         info_regex = re.compile("var uid_ext_session = '(.*)'\\;\\n.*var frontaddr = '(.*)'\\;")
-        r = requests.get("https://en.akinator.com/game", verify=False)
+        r = requests.get("https://en.akinator.mobi/game", verify=False)
 
         match = info_regex.search(r.text)
         self.uid, self.frontaddr = match.groups()[0], match.groups()[1]
 
     def _auto_get_region(self, lang, theme):
-        """Automatically get the uri and server from akinator.com for the specified language and theme"""
+        """Automatically get the uri and server from akinator.mobi for the specified language and theme"""
 
         server_regex = re.compile("[{\"translated_theme_name\":\"[\s\S]*\",\"urlWs\":\"https:\\\/\\\/srv[0-9]+\.akinator\.com:[0-9]+\\\/ws\",\"subject_id\":\"[0-9]+\"}]")
-        uri = lang + ".akinator.com"
+        uri = lang + ".akinator.mobi"
 
-        bad_list = ["https://srv12.akinator.com:9398/ws"]
+        bad_list = ["https://srv12.akinator.mobi:9398/ws"]
         while True:
             r = requests.get("https://" + uri, verify=False)
 
